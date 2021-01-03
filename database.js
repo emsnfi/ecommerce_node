@@ -18,10 +18,10 @@ database.get("/", function(req, res) {
 
 // 建立連線
 var conn = mysql.createConnection({
-host : '127.0.0.1',
-user : 'root',
-password : 'root506411',
-database : 'ecommerce'
+host : 'sql12.freesqldatabase.com',
+user : 'sql12384832',
+password : 'zFvVkJ5ZGj',
+database : 'sql12384832'
 });
 const port = 8080;
 // 建立連線後不論是否成功都會呼叫
