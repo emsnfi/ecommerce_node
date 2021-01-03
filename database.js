@@ -9,7 +9,7 @@ database.use(express.json());
 
 
 database.get("/", function(req, res) {
-        res.sendFile(__dirname + '/data.html', function(err) {
+        res.sendFile(__dirname + '/index.html', function(err) {
             if (err) res.send(404);
         });
     });
