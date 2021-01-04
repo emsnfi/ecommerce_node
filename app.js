@@ -2,7 +2,7 @@
 // import modules
 const express = require('express')
 const app = express()
-const port = 8080
+const port = process.env.PORT || 8080
 var mysql = require('mysql');
 var mc = mysql.createConnection({
   host: "localhost",
