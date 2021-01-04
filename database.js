@@ -22,7 +22,7 @@ var conn = mysql.createConnection({
         password: 'zFvVkJ5ZGj',
         database: 'sql12384832'
 });
-const port = 8080;
+const port = process.env.PORT ||8080;
 // 建立連線後不論是否成功都會呼叫
 conn.connect(function (err) {
         if (!err)
