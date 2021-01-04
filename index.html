@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
 </head>
+
 <body>
         <h1>create</h1>
-        <form action="post">
+        <form action="/submitform/" method="POST" enctype="multipart/form-data">
                 <label for="productid">productId</label>
-                <input type="text" id="productId">
+                <input type="text" id="productid" name="productid">
                 <label for="name">Name</label>
-                <input type="text">
+                <input type="text" id="name" name="name">
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description">
+                <input type="submit" value="送出">
         </form>
 </body>
+<script>
+        $('#signup input[type="submit"]').click(function () {
+                var params = {
+                        id: $("#productid").val(),
+                        name: $("#name").val(),
+                        price: $("#price").val(),
+                        des: $("#description").val(),
+                }
+                console.log(params);
+                /*
+                $ajax({
+                        'url': 'http://localhost:8080/',
+                        'type': 'get',
+                        'data': params,
+                        'success': function (data) {
+                                alert('Data: ' + data);
+                        }
+                })*/
+        });
+</script>
+
 </html>
