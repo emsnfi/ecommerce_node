@@ -8,6 +8,10 @@
     "start": "node database.js",
     "test": "node database.js"
   },
+  "engines": {
+    "node": "12.16.0"
+  },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
